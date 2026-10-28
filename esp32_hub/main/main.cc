@@ -11,6 +11,7 @@
 #include "system_info.h"
 #include "uart_stm.h"
 #include "sensor_hub_task.h"
+#include "ai_mcp_bridge.h"
 
 #define TAG "main"
 
@@ -42,6 +43,9 @@ extern "C" void app_main(void)
 
     // 声明外部任务
     xTaskCreate(SensorHubTask, "sensor_hub", 4096, NULL, 4, NULL);
+
+    // 注册 AI 控灯工具
+    RegisterAiLightControl();
 
     // Launch the application
     auto& app = Application::GetInstance();

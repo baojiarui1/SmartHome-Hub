@@ -43,6 +43,6 @@ public:
     static void Init();
     static void Task(void *pvParameters);
     static void EchoTestTask(void *pvParameters);
-    // static void SendData(const uint8_t* data, uint8_t len);
+    static void SendData(const uint8_t* data, uint8_t len);
     static QueueHandle_t uart_queue; 
 };

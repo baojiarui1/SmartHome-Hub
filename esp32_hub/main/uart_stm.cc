@@ -51,11 +51,11 @@ void UartStm::Init() {
 }
 
 // 提供给上层业务调用的发送接口
-// void UartStm::SendData(const uint8_t* data, uint8_t len) {
-//     if (data != NULL && len > 0) {
-//         uart_write_bytes(STM_UART_PORT, (const char*)data, len);
-//     }
-// }
+void UartStm::SendData(const uint8_t* data, uint8_t len) {
+    if (data != NULL && len > 0) {
+        uart_write_bytes(STM_UART_PORT, (const char*)data, len);
+    }
+}
 
 // ================== 回环测试任务 ==================
 void UartStm::EchoTestTask(void *pvParameters) {

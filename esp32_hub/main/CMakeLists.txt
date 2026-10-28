@@ -38,6 +38,7 @@ set(SOURCES "audio/audio_codec.cc"
             "main.cc"
             "uart_stm.cc"
             "sensor_hub_task.cc"
+            "ai_mcp_bridge.cc"
             )
 
 set(INCLUDE_DIRS "." "display" "display/lvgl_display" "display/lvgl_display/jpg" "audio" "protocols")
