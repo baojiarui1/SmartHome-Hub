@@ -8,6 +8,28 @@ esp32_hub/.clangd
 esp32_hub/sdkconfig.old
 
 # ==========================================
+# 忽略 STM32 子工程 (stm32_hub) 的编译产物 (Keil MDK)
+# ==========================================
+# 忽略 Keil 编译生成的所有临时文件
+stm32_hub/Objects/
+stm32_hub/Listings/
+stm32_hub/DebugConfig/
+stm32_hub/RTE/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.dep
+
+# Keil 的本地用户配置
+stm32_hub/*.uvguix.*
+stm32_hub/*.uvoptx
+
+# ==========================================
 # 忽略外层可能产生的本地配置/系统文件
 # ==========================================
 .vscode/
