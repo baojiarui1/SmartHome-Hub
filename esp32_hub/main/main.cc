@@ -29,19 +29,14 @@ extern "C" void app_main(void)
     }
     ESP_ERROR_CHECK(ret);
 
-    ESP_LOGI(TAG, "==== 纯 UART 最小测试系统启动 ====");
     
     // 初始化串口
     UartStm::Init();
-    
-    // 启动回环测试任务
-    // xTaskCreate(UartStm::EchoTestTask, "uart_echo", 4096, NULL, 5, NULL);
-    // ESP_LOGI(TAG, ">>> 任务创建成功! 系统进入死循环维持运行...");
 
-    // 换成启动正式的 KLV 解析任务
+    // 串口数据处理任务
     xTaskCreate(UartStm::Task, "uart_stm_task", 4096, NULL, 5, NULL);
 
-    // 声明外部任务
+    // 传感器数据处理任务
     xTaskCreate(SensorHubTask, "sensor_hub", 4096, NULL, 4, NULL);
 
     // 注册 AI 控灯工具
