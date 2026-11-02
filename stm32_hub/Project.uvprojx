@@ -337,7 +337,7 @@
               <MiscControls>--no-multibyte-chars</MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\Library;.\User;.\System;.\Hardware</IncludePath>
+              <IncludePath>.\Start;.\Library;.\User;.\System;.\Hardware;.\Protocol</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -711,6 +711,11 @@
               <FileType>5</FileType>
               <FilePath>.\Hardware\Serial.h</FilePath>
             </File>
+            <File>
+              <FileName>dht11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\dht11.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -735,6 +740,21 @@
               <FileName>stm32f10x_it.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\stm32f10x_it.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Protocol</GroupName>
+          <Files>
+            <File>
+              <FileName>uart_to_esp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Protocol\uart_to_esp.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart_to_esp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Protocol\uart_to_esp.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,4 +1,5 @@
 #include "stm32f10x.h"                  // Device header
+#include "uart_to_esp.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -123,7 +124,9 @@ void USART1_IRQHandler(void)
 	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
 	{
 		Serial_RxData = USART_ReceiveData(USART1);
-		Serial_RxFlag = 1;
+		UART_ESP_RxCallback(Serial_RxData);  //走我们的stm uart to esp协议去处理数据
+		// Serial_RxFlag = 1;
+
 		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
 	}
 }
