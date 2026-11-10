@@ -334,10 +334,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--no-multibyte-chars</MiscControls>
-              <Define>USE_STDPERIPH_DRIVER</Define>
+              <MiscControls></MiscControls>
+              <Define>USE_STDPERIPH_DRIVER,__MICROLIB</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\Library;.\User;.\System;.\Hardware;.\Protocol</IncludePath>
+              <IncludePath>.\Start;.\Library;.\User;.\System;.\Hardware;.\Protocol;.\RT-Thread\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -359,7 +359,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -368,7 +368,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>.\Objects\Project.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -741,6 +741,11 @@
               <FileType>5</FileType>
               <FilePath>.\User\stm32f10x_it.h</FilePath>
             </File>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\board.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -755,6 +760,106 @@
               <FileName>uart_to_esp.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Protocol\uart_to_esp.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>RT-Thread</GroupName>
+          <Files>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>components.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\components.c</FilePath>
+            </File>
+            <File>
+              <FileName>cpu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\cpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>cpuport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\cpuport.c</FilePath>
+            </File>
+            <File>
+              <FileName>device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\device.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\idle.c</FilePath>
+            </File>
+            <File>
+              <FileName>ipc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\ipc.c</FilePath>
+            </File>
+            <File>
+              <FileName>irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\irq.c</FilePath>
+            </File>
+            <File>
+              <FileName>kservice.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\kservice.c</FilePath>
+            </File>
+            <File>
+              <FileName>mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>memheap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\memheap.c</FilePath>
+            </File>
+            <File>
+              <FileName>mempool.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\mempool.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\object.c</FilePath>
+            </File>
+            <File>
+              <FileName>scheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>signal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\signal.c</FilePath>
+            </File>
+            <File>
+              <FileName>slab.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\slab.c</FilePath>
+            </File>
+            <File>
+              <FileName>thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RT-Thread\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>context_rvds.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\RT-Thread\context_rvds.S</FilePath>
             </File>
           </Files>
         </Group>
